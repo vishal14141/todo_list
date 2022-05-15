@@ -1,11 +1,124 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            <%= title %>
-        </title>
-    </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title%></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
 
-    <body>
-        <h1>Hello todo</h1>
-    </body>
+
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card rounded-3">
+          <div class="card-body p-4">
+
+            <h4 class="text-center my-3 pb-3">ToDo App</h4>
+
+            <form class="row  g-3 justify-content-center align-items-center mb-4 pb-2" action="/todo/save" method ="POST">
+              <div class="row row-cols-lg-auto">
+              <div class="col-12" style="width:100%">
+                <div class="form-outline" >
+                  <label class="form-label" for="form1">Description</label>
+                  <input type="text" id="form1" name="description"  class="form-control" placeholder="What You need to do?" />
+                  
+                </div>
+              </div>
+              </div>
+             
+              <div class="row row-cols-lg-auto">
+              <div class="col-12 " style="width:100%">
+                <div class="form-outline">
+                  <label class="form-label" for="form2">Category</label>
+                 <select id="form2" name="category" class="form-control">
+                   <option>Select a category </option>
+                   <option value="1" >A</option>
+                   <option value="2">B</option>
+                   <option value="3" >C</option>
+                 </select>
+                  
+                </div>
+
+              </div>
+
+             
+              </div>
+
+              <div class="row row-cols-lg-auto">
+              <div class="col-12 " style="width:100%">
+                <div class="form-outline">
+                  <label class="form-label" for="form2">Due Date</label>
+                 <input type="date" id="form1" name="lastdate"  class="form-control" placeholder="What You need to do?" />
+                  
+                </div>
+
+              </div>
+
+             
+              </div>
+
+              <div>
+
+              <div class="col-12" style="text-align: center;">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add Task</button>
+                 <button type="submit" style="background-color:red; color: white;" class="btn btn-warning"><i class="fas fa-trash"></i> Delete task</button>
+              </div>
+
+
+            </div>
+
+            </form>
+
+            <table class="table mb-4">
+              <thead>
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Todo item</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Buy groceries for next week</td>
+                  <td>In progress</td>
+                  <td>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-success ms-1">Finished</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Renew car insurance</td>
+                  <td>In progress</td>
+                  <td>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                    <button type="submit" class="btn btn-success ms-1">Finished</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Sign up for online course</td>
+                  <td>In progress</td>
+                  <td>
+                    <button type="submit" class="btn btn-primary">School</button>
+                
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
 </html>
