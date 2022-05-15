@@ -9,6 +9,10 @@ const todoSchema = new mongoose.Schema({
         type : String,
         required : true
     },
+    status: {
+        type:String,
+        required : true
+    },
     lastdate : {
         type : Date,
         required : true
